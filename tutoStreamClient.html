@@ -1,0 +1,29 @@
+<html>
+<head>
+	<title>Video</title>
+	<style>
+	</style>
+</head>
+<body>
+<!--<input type="text" id="texto">-->
+	<img id='miImg'>
+	<span id="message"></span>
+    <script language="javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script language="javascript" src="js/fancywebsocket.js"></script>
+	<script>
+		user = 1;
+		function video(img) {
+
+			if (img == "finalizado") {
+				$("#message").html("Ha finalizado la transmision");
+				$("#miImg").hide();
+			} else {
+				document.querySelector('#miImg').src = img;
+				$("#miImg").show();
+
+				$("#message").html("Conectado");
+			}
+		}
+	</script>
+</body>
+</html>
